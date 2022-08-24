@@ -86,6 +86,7 @@
 		9A19A14F19C6E1DC0018DF7D /* tlds.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tlds.c; sourceTree = "<group>"; };
 		9A19A15019C6E1DC0018DF7D /* toutf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = toutf8.c; sourceTree = "<group>"; };
 		9A19A16B19C6E80F0018DF7D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		9A615BF528B1B4A900377F68 /* __target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __target.h; sourceTree = "<group>"; };
 		9AA5E6D616F7C61B005C45CE /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +144,7 @@
 			children = (
 				9A4E844E1D1FD2A0008A419B /* idn */,
 				9A19A13219C6E1DC0018DF7D /* lib */,
+				9A615BF428B1B4A900377F68 /* __target */,
 				9A4E844D1D1FD28E008A419B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +164,14 @@
 				9A19A16B19C6E80F0018DF7D /* config.h */,
 			);
 			name = idn;
+			sourceTree = "<group>";
+		};
+		9A615BF428B1B4A900377F68 /* __target */ = {
+			isa = PBXGroup;
+			children = (
+				9A615BF528B1B4A900377F68 /* __target.h */,
+			);
+			path = __target;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,7 +403,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				INSTALL_PATH = "@executable_path";
+				INSTALL_PATH = "@rpath";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				LIBRARY_SEARCH_PATHS = (
@@ -486,7 +496,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				INSTALL_PATH = "@executable_path";
+				INSTALL_PATH = "@rpath";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				LIBRARY_SEARCH_PATHS = (
