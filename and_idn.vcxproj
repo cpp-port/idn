@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="basis|Android">
-      <Configuration>basis</Configuration>
+    <ProjectConfiguration Include="debug|Android">
+      <Configuration>debug</Configuration>
       <Platform>Android</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="memdleak|Android">
@@ -17,12 +17,12 @@
       <Configuration>profiler</Configuration>
       <Platform>Android</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="stage|Android">
-      <Configuration>stage</Configuration>
+    <ProjectConfiguration Include="release|Android">
+      <Configuration>release</Configuration>
       <Platform>Android</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="static_basis|Android">
-      <Configuration>static_basis</Configuration>
+    <ProjectConfiguration Include="static_debug|Android">
+      <Configuration>static_debug</Configuration>
       <Platform>Android</Platform>
     </ProjectConfiguration>
   </ItemGroup>
@@ -64,7 +64,7 @@
     <RootNamespace>axisidn</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Android'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Android'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
@@ -85,14 +85,14 @@
     <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|Android'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|Android'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <AndroidStlType>gnustl_dynamic</AndroidStlType>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
@@ -104,7 +104,7 @@
     <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
@@ -120,11 +120,11 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|Itanium'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
@@ -135,7 +135,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='basis|Android'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug|Android'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Android'" Label="PropertySheets">
@@ -144,16 +144,16 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profiler|Android'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='stage|Android'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release|Android'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'" Label="PropertySheets">
@@ -165,10 +165,10 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release|Itanium'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'" Label="PropertySheets">
@@ -177,94 +177,94 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30128.1</_ProjectFileVersion>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='basis|Android'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='debug|Android'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Android'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profiler|Android'">false</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='stage|Android'">false</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='release|Android'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='basis|Android'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='debug|Android'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Android'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='profiler|Android'">false</GenerateManifest>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='stage|Android'">false</GenerateManifest>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='release|Android'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'">false</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='codeanalysis|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='release|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'">ia64\ZlibDll$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='codeanalysis|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='release|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'">ia64\ZlibDll$(Configuration)\Tmp\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='codeanalysis|Itanium'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'">true</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'">true</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='release|Itanium'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='codeanalysis|Itanium'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'">false</GenerateManifest>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'">false</GenerateManifest>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='release|Itanium'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'">false</GenerateManifest>
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='codeanalysis|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='release|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='codeanalysis|Itanium'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'" />
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'" />
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='release|Itanium'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Itanium'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='codeanalysis|Itanium'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profiler|Itanium'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='release|Itanium'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='memdleak|Itanium'" />
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='basis|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='debug|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profiler|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='stage|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='release|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='basis|Android'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='debug|Android'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Android'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profiler|Android'" />
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='stage|Android'" />
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='release|Android'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='basis|Android'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='debug|Android'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='no_precompiled_header|Android'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profiler|Android'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='stage|Android'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='release|Android'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'" />
     <TargetName Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'">zlibwapi</TargetName>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Android'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Android'">
     <IncludePath>$(AndroidIncludeDir);$(AndroidStlIncludeDir);</IncludePath>
     <ReferencePath>$(VCInstallDir)lib</ReferencePath>
     <LibraryPath>$(AndroidLibDir);$(AndroidStlLibPath);</LibraryPath>
     <SourcePath>$(VCInstallDir)crt\src;</SourcePath>
     <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\include</ExcludePath>
-    <OutDir>$(SolutionDir)..\..\..\stage\$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)..\..\..\release\$(PlatformName)\</OutDir>
     <IntDir>$(SolutionDir)..\..\..\time\intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
@@ -274,7 +274,7 @@
     <LibraryPath>$(AndroidLibDir);$(AndroidStlLibPath);</LibraryPath>
     <SourcePath>$(VCInstallDir)crt\src;</SourcePath>
     <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\include</ExcludePath>
-    <OutDir>$(SolutionDir)..\..\..\stage\$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)..\..\..\release\$(PlatformName)\</OutDir>
     <IntDir>$(SolutionDir)..\..\..\time\intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
@@ -285,7 +285,7 @@
     <SourcePath>$(VCInstallDir)crt\src;</SourcePath>
     <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\include</ExcludePath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|Android'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|Android'">
     <IncludePath>$(VCInstallDir)include;$(WindowsSDK_IncludePath);</IncludePath>
     <ReferencePath>$(VCInstallDir)lib</ReferencePath>
     <LibraryPath>$(VCInstallDir)lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
@@ -293,14 +293,14 @@
     <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\include</ExcludePath>
     <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'">
     <IncludePath>$(VCInstallDir)include;$(WindowsSDK_IncludePath);</IncludePath>
     <ReferencePath>$(VCInstallDir)lib</ReferencePath>
     <LibraryPath>$(VCInstallDir)lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
     <SourcePath>$(VCInstallDir)crt\src;</SourcePath>
     <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\include</ExcludePath>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|Android'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|Android'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -521,7 +521,7 @@
       <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
     </Xdcmake>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Android'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|Android'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -596,7 +596,7 @@
       <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
     </Xdcmake>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='static_debug|Android'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -716,7 +716,7 @@
 bld_ml32.bat</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|Itanium'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|Itanium'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -888,7 +888,7 @@ bld_ml32.bat</Command>
       <TargetMachine>MachineIA64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Itanium'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|Itanium'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -931,7 +931,7 @@ bld_ml32.bat</Command>
       <TargetMachine>MachineIA64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='static_basis|Itanium'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='static_debug|Itanium'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
