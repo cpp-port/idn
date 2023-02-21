@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>_idn.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
 		<key>axisidn copy.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -38,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>9AA5E4C216F7C61B005C45CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AC14D5B297B34E3006D9BD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
