@@ -113,7 +113,7 @@
 		9A19A16B19C6E80F0018DF7D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		9A615BF528B1B4A900377F68 /* __target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __target.h; sourceTree = "<group>"; };
 		9AA5E6D616F7C61B005C45CE /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AC14D7B297B34E3006D9BD3 /* lib_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = lib_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC14D7B297B34E3006D9BD3 /* libstatic_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 				9A19A13219C6E1DC0018DF7D /* lib */,
 				9A615BF428B1B4A900377F68 /* __target */,
 				9A4E844D1D1FD28E008A419B /* Products */,
-				9AC14D7B297B34E3006D9BD3 /* lib_idn.a */,
+				9AC14D7B297B34E3006D9BD3 /* libstatic_idn.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -289,9 +289,9 @@
 			productReference = 9AA5E6D616F7C61B005C45CE /* libidn.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		9AC14D5B297B34E3006D9BD3 /* _idn */ = {
+		9AC14D5B297B34E3006D9BD3 /* static_idn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AC14D78297B34E3006D9BD3 /* Build configuration list for PBXNativeTarget "_idn" */;
+			buildConfigurationList = 9AC14D78297B34E3006D9BD3 /* Build configuration list for PBXNativeTarget "static_idn" */;
 			buildPhases = (
 				9AC14D5C297B34E3006D9BD3 /* Headers */,
 				9AC14D66297B34E3006D9BD3 /* Sources */,
@@ -300,9 +300,9 @@
 			);
 			dependencies = (
 			);
-			name = _idn;
+			name = static_idn;
 			productName = FreeImage;
-			productReference = 9AC14D7B297B34E3006D9BD3 /* lib_idn.a */;
+			productReference = 9AC14D7B297B34E3006D9BD3 /* libstatic_idn.a */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -333,8 +333,8 @@
 			projectRoot = "";
 			targets = (
 				9AA5E4C216F7C61B005C45CE /* idn */,
-				9AC14D5B297B34E3006D9BD3 /* _idn */,
 				077A00881B4D4F9E001C85FF /* ios_idn */,
+				9AC14D5B297B34E3006D9BD3 /* static_idn */,
 			);
 		};
 /* End PBXProject section */
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AC14D78297B34E3006D9BD3 /* Build configuration list for PBXNativeTarget "_idn" */ = {
+		9AC14D78297B34E3006D9BD3 /* Build configuration list for PBXNativeTarget "static_idn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AC14D79297B34E3006D9BD3 /* Debug */,
