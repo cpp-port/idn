@@ -38,7 +38,7 @@
 #include "stringprep.h"
 #include "punycode.h"
 
-#include "idna.h"
+#include "idn/idna.h"
 
 #undef strncasecmp
 #undef strcasecmp

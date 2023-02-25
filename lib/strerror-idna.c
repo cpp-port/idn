@@ -31,7 +31,7 @@
 # include "config.h"
 #endif
 
-#include "idna.h"
+#include "idn/idna.h"
 
 //#include "gettext.h"
 //#define _(String) dgettext (PACKAGE, String)
