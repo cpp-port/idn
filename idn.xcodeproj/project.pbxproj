@@ -512,6 +512,7 @@
 					"$(HOME)/operating-system/operating-system/include",
 				);
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)",
 					"$(WorkspaceDir)",
 					"$(WorkspaceDir)/source/port/include/operating-system/$(PLATFORM_MODIFIER)",
@@ -593,6 +594,7 @@
 					"$(HOME)/operating-system/operating-system/include",
 				);
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)",
 					"$(WorkspaceDir)",
 					"$(WorkspaceDir)/source/port/include/operating-system/$(PLATFORM_MODIFIER)",
