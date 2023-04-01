@@ -87,7 +87,7 @@ const char *
 stringprep_locale_charset (void)
 {
 
-#ifndef _UWP
+#ifndef UNIVERSAL_WINDOWS
   const char *charset = getenv ("CHARSET");	/* flawfinder: ignore */
 
   if (charset && *charset)
