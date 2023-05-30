@@ -112,7 +112,8 @@
 		9A19A15019C6E1DC0018DF7D /* toutf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = toutf8.c; sourceTree = "<group>"; };
 		9A19A16B19C6E80F0018DF7D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		9A615BF528B1B4A900377F68 /* __target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __target.h; sourceTree = "<group>"; };
-		9A7724512A2568AD00B9A835 /* machine.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = machine.xcconfig; path = ../../../../operating_system/machine.xcconfig; sourceTree = "<group>"; };
+		9A7724F52A257D2800B9A835 /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		9A7724F62A257D2800B9A835 /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		9AA5E6D616F7C61B005C45CE /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC14D7B297B34E3006D9BD3 /* libstatic_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,7 +170,6 @@
 		9A1B2F7D16A2AF5C00875A94 = {
 			isa = PBXGroup;
 			children = (
-				9A7724512A2568AD00B9A835 /* machine.xcconfig */,
 				9A4E844E1D1FD2A0008A419B /* idn */,
 				9A19A13219C6E1DC0018DF7D /* lib */,
 				9A615BF428B1B4A900377F68 /* __target */,
@@ -190,6 +190,8 @@
 		9A4E844E1D1FD2A0008A419B /* idn */ = {
 			isa = PBXGroup;
 			children = (
+				9A7724F62A257D2800B9A835 /* debug.xcconfig */,
+				9A7724F52A257D2800B9A835 /* release.xcconfig */,
 				9A19A16B19C6E80F0018DF7D /* config.h */,
 			);
 			name = idn;
@@ -438,7 +440,6 @@
 		};
 		9A1B2F8A16A2AF5C00875A94 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A7724512A2568AD00B9A835 /* machine.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -492,7 +493,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
@@ -515,13 +515,20 @@
 					"$(HOME)/operating_system/operating_system/include",
 				);
 				USER_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)",
-					"$(WorkspaceDir)",
-					"$(WorkspaceDir)/source/port/include/operating_system/$(PLATFORM_MODIFIER)",
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
 				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../..";
@@ -530,7 +537,6 @@
 		};
 		9A1B2F8B16A2AF5C00875A94 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A7724512A2568AD00B9A835 /* machine.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -577,7 +583,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
@@ -598,13 +603,20 @@
 					"$(HOME)/operating_system/operating_system/include",
 				);
 				USER_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)",
-					"$(WorkspaceDir)",
-					"$(WorkspaceDir)/source/port/include/operating_system/$(PLATFORM_MODIFIER)",
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
 				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../..";
