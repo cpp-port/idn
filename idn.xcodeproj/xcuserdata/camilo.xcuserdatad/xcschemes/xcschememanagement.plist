@@ -14,30 +14,30 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>idn.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>36</integer>
+		</dict>
+		<key>ios_idn.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>static_idn.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>33</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>077A00881B4D4F9E001C85FF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9A1B2F8716A2AF5C00875A94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9AA5E2AD16F7C4F0005C45CE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9AA5E4C216F7C61B005C45CE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9AC14D5B297B34E3006D9BD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
