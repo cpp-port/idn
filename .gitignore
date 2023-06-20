@@ -1,5 +1,6 @@
 **/xcuserdata
 .DS_Store
+**/xcuserdata
 _packages.txt
 deployment.rc
 application_build_helper_input.txt
