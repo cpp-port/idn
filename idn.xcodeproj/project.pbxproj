@@ -316,7 +316,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					077A00881B4D4F9E001C85FF = {
@@ -473,6 +473,7 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -502,10 +503,8 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PLATFORM_DIR = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
@@ -515,21 +514,17 @@
 					"$(HOME)/operating_system/operating_system/include",
 				);
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/../../_/$(PROJECT_NAME)",
 					.,
-					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
-					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
-					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration/$(PROJECT_NAME)",
 					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/..",
-					"$(PROJECT_DIR)/../..",
-					"$(HOME)/sensitive/sensitive/include",
 				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../..";
@@ -572,6 +567,7 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -593,7 +589,6 @@
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
 				);
 				OTHER_LDFLAGS = "-all_load";
-				PLATFORM_DIR = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -605,21 +600,17 @@
 					"$(HOME)/operating_system/operating_system/include",
 				);
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/../../_/$(PROJECT_NAME)",
 					.,
-					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
-					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
-					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration/$(PROJECT_NAME)",
 					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/..",
-					"$(PROJECT_DIR)/../..",
-					"$(HOME)/sensitive/sensitive/include",
 				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../..";
