@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -309,7 +309,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1610;
-				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
+				ORGANIZATIONNAME = "ca2 Software Development";
 				TargetAttributes = {
 					077A00881B4D4F9E001C85FF = {
 						DevelopmentTeam = L8N5V6TZE5;
@@ -317,7 +317,7 @@
 				};
 			};
 			buildConfigurationList = 9A1B2F8216A2AF5C00875A94 /* Build configuration list for PBXProject "idn" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
