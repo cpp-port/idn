@@ -1306,13 +1306,13 @@
 
 
 
-#if defined(LINUX) || defined(ANDROID)
+#if defined(LINUX) || defined(__ANDROID__)
 #define c_strncasecmp strncasecmp
 #define c_strcasecmp strcasecmp
 #endif
 
 
-#if defined(__APPLE__) || defined(ANDROID)
+#if defined(__APPLE__) || defined(__ANDROID__)
 #undef _
 #define _(txt) txt
 #endif
