@@ -33,8 +33,8 @@
 
 #include "punycode.h"
 
-//#include "gettext.h"
-//#define _(String) dgettext (PACKAGE, String)
+#include "gettext.h"
+#define _(String) dgettext (PACKAGE, String)
 
 /**
  * punycode_strerror:

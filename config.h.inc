@@ -1,6 +1,6 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
-#include "configuration/config.h"
+#include "configuration/config.h.h"
 #include <stdlib.h>
 #include <stdint.h>
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(zlib C)
+project(idn C)
 
 #set(VERSION "1.2.11")
 
@@ -19,7 +19,7 @@ project(zlib C)
 #enable_testing()
 
 if(MSVC)
-    set(CMAKE_DEBUG_POSTFIX "d")
+    #set(CMAKE_DEBUG_POSTFIX "d")
     add_definitions(-D_CRT_SECURE_NO_DEPRECATE)
     add_definitions(-D_CRT_NONSTDC_NO_DEPRECATE)
     include_directories(${CMAKE_CURRENT_SOURCE_DIR})
@@ -35,20 +35,21 @@ endif()
 
 
 #set(IDN_PUBLIC_HDRS
- #   idn/idna.h
+ #   ${PROJECT_NAME}/idna.h
 #)
 
-#target_include_directories(idn PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
-#target_include_directories(idn PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+#target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+#target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
 
 
 set(IDN_PRIVATE_HDRS
-        config.h
+        #config.h
         lib/tld.h
 )
+
 set(IDN_SRCS
-        lib/idn-free.c
+        lib/${PROJECT_NAME}-free.c
         lib/idna.c
         lib/nfkc.c
         lib/pr29.c
@@ -68,14 +69,22 @@ set(IDN_SRCS
 )
 
 
+add_library(${PROJECT_NAME} SHARED ${IDN_SRCS} ${IDN_PUBLIC_HDRS} ${IDN_PRIVATE_HDRS})
+add_library(static_${PROJECT_NAME} SHARED ${IDN_SRCS} ${IDN_PUBLIC_HDRS} ${IDN_PRIVATE_HDRS})
 
 
-add_library(idn SHARED ${IDN_SRCS} ${IDN_PUBLIC_HDRS} ${IDN_PRIVATE_HDRS})
-target_compile_definitions(idn PRIVATE HAVE_CONFIG_H)
-target_include_directories(idn PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-target_include_directories(idn PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating_system/third-${OPERATING_SYSTEM_NAME}/third/include/idn)
-#add_library(zlibstatic STATIC ${ZLIB_SRCS} ${ZLIB_ASMS} ${ZLIB_PUBLIC_HDRS} ${ZLIB_PRIVATE_HDRS})
-set_target_properties(idn PROPERTIES DEFINE_SYMBOL IDN_DLL)
-#set_target_properties(idn PROPERTIES SOVERSION 1)
+target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_CONFIG_H LIBIDN_BUILDING)
+target_compile_definitions(static_${PROJECT_NAME} PRIVATE HAVE_CONFIG_H LIBIDN_BUILDING LIBIDN_STATIC)
 
+
+set_target_properties(${PROJECT_NAME} PROPERTIES DEFINE_SYMBOL IDN_DLL)
+
+
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME})
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating_system/operating_system-${PLATFORM_NAME}/configuration/${PROJECT_NAME})
+
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
+target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_directories})
 

@@ -33,8 +33,8 @@
 
 #include "tld.h"
 
-//#include "gettext.h"
-//#define _(String) dgettext (PACKAGE, String)
+#include "gettext.h"
+#define _(String) dgettext (PACKAGE, String)
 
 /**
  * tld_strerror:

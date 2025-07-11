@@ -33,8 +33,8 @@
 
 #include "idn/idna.h"
 
-//#include "gettext.h"
-//#define _(String) dgettext (PACKAGE, String)
+#include "gettext.h"
+#define _(String) dgettext (PACKAGE, String)
 
 /**
  * idna_strerror:
