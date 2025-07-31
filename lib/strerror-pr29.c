@@ -34,7 +34,7 @@
 #include "pr29.h"
 
 #include "gettext.h"
-#define _(String) dgettext (PACKAGE, String)
+//#define _(String) dgettext (PACKAGE, String)
 
 /**
  * pr29_strerror:

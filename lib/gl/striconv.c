@@ -25,7 +25,7 @@
 #include <string.h>
 
 #if HAVE_ICONV
-# include "atom/iconv/include/iconv.h"
+# include <iconv.h>
 /* Get MB_LEN_MAX, CHAR_BIT.  */
 # include <limits.h>
 #endif

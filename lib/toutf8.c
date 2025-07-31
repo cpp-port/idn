@@ -44,7 +44,7 @@
 #include <string.h>
 
 /* Get iconv_string. */
-#ifdef LINUX
+#if defined(LINUX) || defined(__ANDROID__)
 #include "gl/striconv.h"
 #endif
 

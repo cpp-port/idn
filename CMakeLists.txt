@@ -66,16 +66,18 @@ set(IDN_SRCS
         lib/tlds.c
         lib/toutf8.c
         #lib/version.c
+        lib/gl/striconv.c
 )
 
 
 add_library(${PROJECT_NAME} SHARED ${IDN_SRCS} ${IDN_PUBLIC_HDRS} ${IDN_PRIVATE_HDRS})
-add_library(static_${PROJECT_NAME} SHARED ${IDN_SRCS} ${IDN_PUBLIC_HDRS} ${IDN_PRIVATE_HDRS})
+add_library(static_${PROJECT_NAME} STATIC ${IDN_SRCS} ${IDN_PUBLIC_HDRS} ${IDN_PRIVATE_HDRS})
 
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_CONFIG_H LIBIDN_BUILDING)
 target_compile_definitions(static_${PROJECT_NAME} PRIVATE HAVE_CONFIG_H LIBIDN_BUILDING LIBIDN_STATIC)
 
+target_link_libraries(${PROJECT_NAME} PRIVATE iconv)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES DEFINE_SYMBOL IDN_DLL)
 
@@ -83,6 +85,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES DEFINE_SYMBOL IDN_DLL)
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME})
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating_system/operating_system-${PLATFORM_NAME}/configuration/${PROJECT_NAME})
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating_system/operating_system-${PLATFORM_NAME}/include)
 
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
