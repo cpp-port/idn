@@ -30,7 +30,7 @@
 #ifndef STRINGPREP_H
 # define STRINGPREP_H
 
-#ifdef __APPLE__
+#ifndef _WIN32
 #include <sys/types.h>
 #endif
 
@@ -234,7 +234,7 @@ extern "C"
 						      *req_version);
 
 /* Utility */
-#ifndef __APPLE__
+#ifdef _MSC_VER
 #define ssize_t int64_t
 #endif
   extern IDNAPI int stringprep_unichar_to_utf8 (uint32_t c, char *outbuf);
